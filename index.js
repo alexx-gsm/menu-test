@@ -1,5 +1,3 @@
-console.log('hello')
-
 const buttonMenu = document.getElementById('dropdown-link')
 const dropdownMenu = document.getElementById('dropdown')
 
