@@ -1,0 +1,94 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: antiquewhite;
+    border-bottom: 1px solid rgb(219, 198, 171);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav .menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav .menu .menu-item {
+    margin-left: 8px;
+    position: relative;
+}
+
+.nav .menu a {
+    text-decoration: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 30px;
+    right: 0;
+    background-color: whitesmoke;
+    padding: 4px 0;
+    border: 1px solid #c7c7c7;
+    border-radius: 4px;
+}
+
+.dropdown::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: whitesmoke;
+    top: -6px;
+    right: 20px;
+    transform: rotate(45deg);
+    border-left: 1px solid  #c7c7c7;
+    border-top: 1px solid  #c7c7c7;
+}
+
+.dropdown.is-open {
+    display: block;
+}
+
+.dropdown .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+.dropdown .menu .menu-item {
+    margin: 0;
+}
+
+.dropdown .menu .menu-item a {
+    padding: 4px 8px;
+    color: #333;
+    display: block;
+}
+
+.dropdown .menu .menu-item a:hover {
+    background-color: antiquewhite;
+}
